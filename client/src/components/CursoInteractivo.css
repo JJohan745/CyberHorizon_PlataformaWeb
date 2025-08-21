@@ -1,0 +1,423 @@
+/* Estilos globales para la vista del curso interactivo */
+.curso-interactivo {
+    display: flex; /* Utiliza Flexbox para organizar la barra lateral y el contenido principal */
+    min-height: 100vh; /* Asegura que la altura sea al menos la del viewport */
+    font-family: 'Inter', sans-serif; /* Usar fuente Inter para una tipografía moderna */
+    background-color: #f0f2f5; /* Fondo suave para un diseño limpio */
+    color: #333; /* Color de texto principal */
+}
+
+/* Estilos para la barra lateral de navegación */
+.barra-lateral {
+    width: 250px; /* Ancho fijo de la barra lateral */
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra para dar profundidad */
+    border-radius: 0 10px 10px 0; /* Bordes redondeados en el lado derecho */
+    display: flex; /* Flexbox para organizar los elementos internos (título, progreso, lista) */
+    flex-direction: column;
+}
+
+.barra-lateral h3 {
+    color: #2196f3; /* Color personalizado del usuario para el título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-size: 1.5em; /* Tamaño de fuente más grande */
+    text-align: center; /* Centrar el título */
+}
+
+/* Estilos para el contenedor de la barra de progreso y el porcentaje */
+.progress-container {
+  display: flex; /* Flexbox para alinear la barra y el porcentaje */
+  align-items: center; /* Alinear verticalmente */
+  gap: 10px; /* Espacio entre la barra y el porcentaje */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+.barra-lateral progress {
+    flex-grow: 1; /* Permite que la barra ocupe el espacio disponible */
+    height: 8px; /* Altura de la barra */
+    border-radius: 5px;
+    appearance: none; /* Propiedad para permitir la personalización de la barra de progreso */
+}
+
+/* Estilos para la barra de progreso en navegadores WebKit (Chrome, Safari) */
+.barra-lateral progress::-webkit-progress-bar {
+    background-color: #e0e0e0; /* Color de la barra de fondo */
+    border-radius: 5px;
+}
+
+/* Estilos para el valor de la barra de progreso en navegadores WebKit */
+.barra-lateral progress::-webkit-progress-value {
+    background-color: #02cf2e; /* Color de la barra de progreso (verde) */
+    border-radius: 5px;
+}
+
+.progress-percentage {
+  font-weight: bold;
+  color: #34495e;
+  font-size: 0.95em;
+  min-width: 40px; /* Asegura que el porcentaje tenga suficiente espacio */
+  text-align: right;
+}
+
+.barra-lateral ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    flex-grow: 1; /* Permite que la lista ocupe el espacio disponible */
+}
+
+/* Estilos para cada elemento de la lista (módulo) */
+.barra-lateral li {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves al interactuar */
+    font-weight: 500;
+    color: #555;
+}
+
+.barra-lateral li:hover {
+    background-color: #dce0e3;
+    transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+}
+
+/* Estilo para el módulo actualmente seleccionado */
+.barra-lateral li.actual {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Estilo para los módulos completados */
+.barra-lateral li.completado {
+    background: #c8e6c9; /* Color de fondo verde claro */
+    color: #2e7d32; /* Color de texto verde oscuro */
+}
+
+/* Estilo para los módulos pendientes */
+.barra-lateral li.pendiente {
+    background: #eee; /* Color de fondo gris claro */
+    color: #666; /* Color de texto gris oscuro */
+}
+
+/* Estilos para el contenedor del contenido principal */
+.contenido-modulo {
+    flex-grow: 1; /* El contenido principal ocupa el espacio restante */
+    padding: 30px;
+    background-color: #ffffff;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título del módulo */
+.contenido-modulo h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 2em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* Contenedor de la lista de contenidos */
+.contenido-lista {
+    flex-grow: 1;
+    overflow-y: auto; /* Permite desplazamiento vertical si el contenido es largo */
+    padding-right: 10px;
+}
+
+/* Estilo para cada elemento de contenido (video, texto, etc.) */
+.contenido-item {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Estilo para el texto dentro del contenido, asegurando un buen tamaño de fuente y espaciado */
+.contenido-texto div {
+    line-height: 1.6;
+    font-size: 1.32em; /* Tamaño de letra del contenido */
+}
+
+/* Estilos para hacer videos de YouTube responsivos */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Estilo para imágenes */
+.contenido-imagen {
+    text-align: center;
+}
+
+.contenido-imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilo para el componente de test */
+.contenido-test h3 {
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+/* Estilos para el componente Test */
+.test {
+  padding: 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para cada pregunta del test */
+.pregunta {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.pregunta:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.pregunta p strong {
+  font-size: 1.1em;
+  color: #2c3e50;
+}
+
+/* Estilo para la lista de opciones */
+.opciones-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Estilo para cada opción individual */
+.opcion-item label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 12px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  font-size: 1.05em; /* Tamaño de fuente de las alternativas */
+}
+
+.opcion-item label:hover {
+  background-color: #f5f5f5;
+}
+
+.opcion-item input[type="radio"] {
+  margin-right: 10px;
+  accent-color: #3498db; /* Color del radio button */
+}
+
+/* Feedback de respuestas */
+.opcion-item.correct-answer label {
+  background-color: #e6ffe6; /* Fondo verde claro */
+  border-color: #28a745; /* Borde verde */
+  color: #28a745; /* Texto verde */
+  font-weight: bold;
+}
+
+.opcion-item.incorrect-answer label {
+  background-color: #ffe6e6; /* Fondo rojo claro */
+  border-color: #dc3545; /* Borde rojo */
+  color: #dc3545; /* Texto rojo */
+  font-weight: bold;
+}
+
+.correct-feedback {
+  margin-left: 10px;
+  color: #28a745;
+}
+
+/* Estilos para los botones de enviar y reintentar */
+.submit-button, .retry-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+  margin-top: 20px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.submit-button:hover:not(:disabled), .retry-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Estilos para el contenedor de resultados */
+.resultados-test {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #b0e0e6;
+  border-radius: 8px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+.resultados-test h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la barra de navegación entre módulos */
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.navegacion button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+}
+
+.navegacion button:hover:not(:disabled) {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.navegacion button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Ajustes de tipografía para el contenido inyectado dinámicamente */
+.contenido-texto div {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Estilos para tablas dentro del contenido */
+.contenido-texto table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contenido-texto table:first-child {
+  margin-top: 0 !important;
+}
+
+.contenido-texto th,
+.contenido-texto td {
+    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.contenido-texto th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.contenido-texto tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.contenido-texto tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para notas o 'trucos' */
+.contenido-texto .truco-nota {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: #664d03;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contenido-texto .truco-nota span.icon {
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .curso-interactivo {
+        flex-direction: column;
+    }
+
+    .barra-lateral {
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .contenido-modulo {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .navegacion {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navegacion button {
+        width: 100%;
+    }
+}

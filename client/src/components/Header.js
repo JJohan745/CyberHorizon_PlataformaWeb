@@ -1,5 +1,5 @@
 import React from 'react';
-//import './Header.css'; // Comentado, pero podrías necesitarlo para estilizar
+import '../styles/Header.css';
 
 // Componente del encabezado (header)
 function Header() {

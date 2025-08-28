@@ -7,14 +7,14 @@ import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
 import Footer from './components/Footer';
-import VistaModulos from './components/VistaModulos';
-import CursosVista from './components/CursosVista';
-import CursoDetalle from './components/CursoDetalle';
-import CursoInteractivo from './components/CursoInteractivo';
+import VistaModulos from './components/Cursos/VistaModulos';
+import CursosVista from './components/Cursos/CursosVista';
+import CursoDetalle from './components/Cursos/CursoDetalle';
+import CursoInteractivo from './components/Cursos/CursoInteractivo';
 
 
 // Importa el archivo de estilos principal
-import './App.css';
+import './styles/App.css';
 
 // El componente principal de la aplicación
 function App() {

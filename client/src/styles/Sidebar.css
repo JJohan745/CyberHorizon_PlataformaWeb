@@ -1,0 +1,103 @@
+/*
+ * Archivo: client/src/styles/Sidebar.css
+ * Descripción: Estilos para el componente Sidebar.js.
+*/
+
+/* * Estilos para el contenedor principal de la barra lateral.
+ * Define el ancho, un fondo degradado, el color del texto y transiciones
+ * para animar los cambios de tamaño.
+*/
+.sidebar {
+  width: 200px;
+  background: linear-gradient(to bottom, #007bff, #66aef6);
+  color: white;
+  padding: 1rem;
+  transition: width 0.3s ease;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor. */
+}
+
+/*
+ * Estilo para la barra lateral cuando está en estado "cerrado".
+ * Reduce el ancho para contraerla.
+*/
+.sidebar.closed {
+  width: 60px;
+}
+
+/* * Elimina los marcadores de lista y el relleno por defecto
+ * para los elementos <ul>.
+*/
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* * Estilos para cada elemento de la lista (<li>) en la barra lateral.
+ * Define tamaño de fuente, márgenes, puntero del mouse y una
+ * transición para el efecto de fondo.
+*/
+.sidebar li {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+/*
+ * Estilo para los enlaces (<a>) dentro de los elementos de la lista.
+ * Hace que cada enlace ocupe todo el espacio de su contenedor <li>,
+ * mejorando el área de clic.
+*/
+.sidebar li a {
+  display: block; 
+}
+
+/* * Efecto de fondo al pasar el cursor sobre los elementos de la lista.
+ * Cambia el color de fondo para indicar interactividad.
+*/
+.sidebar li:hover {
+  background-color: #0056b3;
+}
+
+/* * Estilos para los enlaces (<a>) en la barra lateral.
+ * Define el color del texto y elimina la subrayado.
+*/
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* * Efecto de hover para los enlaces.
+ * Mantiene el color del texto blanco.
+*/
+.sidebar a:hover {
+  color: white;
+}
+
+/*
+ * Estilos para el botón de alternar (toggle-btn).
+ * Le da un diseño circular, un color de fondo, color de texto
+ * y define el tamaño, la alineación del texto y el estilo del cursor.
+*/
+.toggle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; 
+  background-color: #007bff;
+  color: white;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+

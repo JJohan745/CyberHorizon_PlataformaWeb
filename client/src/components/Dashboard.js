@@ -1,6 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import StatCard from './StatCard';
-import CursoCard from './CursoCard';
+import CursoCard from './Cursos/CursoCard';
+import '../styles/Dashboard.css';
+
+// Componente funcional StatCard que acepta dos props: 'titulo' y 'valor'
+function StatCard({ titulo, valor }) {
+  return (
+    // Contenedor principal para la tarjeta de estadísticas
+    <div className="stat-card">
+      {/* Título de la estadística */}
+      <h4>{titulo}</h4>
+      {/* Valor de la estadística */}
+      <p>{valor}</p>
+    </div>
+  );
+}
 
 // Componente principal del panel de control
 function Dashboard() {

@@ -1,0 +1,44 @@
+/*
+ * Archivo: client/src/styles/Header.css
+ * Descripción: Estilos para el componente Header.js.
+*/
+
+/*
+  Estilos para el encabezado (header) de la aplicación
+  Define un fondo con un gradiente, color de texto y alineación.
+*/
+.header {
+  background: linear-gradient(to bottom, #a0ceff, white); /* Gradiente de azul a blanco */
+  color: #007bff;
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos a los extremos */
+  align-items: center;
+  padding: 1.5rem;
+  height: 80px;
+}
+
+/* Estilo para el logotipo en el encabezado */
+.logo {
+  font-size: 1.5rem;
+}
+
+/*
+  Estilos para el botón de salida (logout)
+  Quita el fondo y el borde, y define el estilo del texto y el cursor.
+  Añade una transición para un efecto suave al pasar el mouse.
+*/
+.logout-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto al pasar el mouse sobre el botón de salida */
+.logout-btn:hover {
+  color: white; /* Cambia el color del texto a blanco */
+  transform: translateY(-5px); /* Desplaza el botón 5px hacia arriba */
+}

@@ -1,0 +1,16 @@
+/*
+ * Archivo: client/src/styles/footer.css
+ * Descripción: Estilos para el componente Footer.js.
+*/
+
+/*
+  Estilos para el pie de página (footer)
+  Define el color de fondo, el relleno y la alineación.
+*/
+.footer {
+  background: #f7f7f7;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}

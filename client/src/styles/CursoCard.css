@@ -1,0 +1,58 @@
+/*
+ * Archivo: client/src/styles/components/curso-card.css
+ * Descripción: Estilos para el componente CursoCard.js.
+*/
+
+/*
+  Estilo para cada tarjeta de curso
+  Define un fondo con gradiente, relleno, bordes redondeados y alineación.
+  Añade transiciones para efectos visuales.
+*/
+.curso-card {
+  background: linear-gradient(to bottom, #007bff, #72b3f9);
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 250px; /* Tamaño fijo del ancho */
+  height: 250px; /* Tamaño fijo del alto */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta de curso */
+.curso-card:hover {
+  transform: translateY(-10px); /* Desplaza la tarjeta 10px hacia arriba */
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15); /* Añade una sombra más pronunciada */
+}
+
+/* Estilo para el título de la sección de cursos */
+.titulo-cursos {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo para el título en la sección de cursos */
+.titulo-Scurso {
+  font-size: 3.5rem;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo para la descripción del curso */
+.descripcion-curso {
+  font-size: 1.3rem;
+  color: #444;
+}
+
+/* Estilo para los elementos select (menú desplegable) */
+select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}

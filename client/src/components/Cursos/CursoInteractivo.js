@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams} from 'react-router-dom';
-import './CursoInteractivo.css';
-import Test from './Test.js'; // Importa el componente Test para las evaluaciones
+import '../../styles/CursoInteractivo.css';
+import Test from '../Test.js'; // Importa el componente Test para las evaluaciones
 
 // Función de utilidad para convertir una URL de YouTube a un formato incrustable (embed)
 const getEmbedUrl = (url) => {

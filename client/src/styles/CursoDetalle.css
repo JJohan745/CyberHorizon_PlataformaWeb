@@ -1,0 +1,79 @@
+/*
+ * Archivo: client/src/styles/components/curso-detalle.css
+ * Descripción: Estilos para el componente CursoDetalle.js.
+*/
+
+/*
+  Estilos para la vista de detalle de un curso
+  Utiliza flexbox y añade un fondo, sombra y bordes redondeados.
+*/
+.curso-detalle {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+}
+
+/*
+  Estilo para el contenedor de la información del curso
+  Ocupa el espacio restante del flexbox.
+*/
+.curso-info {
+  flex: 1;
+  justify-content: space-between;
+}
+
+/* Estilo para el título en la sección de cursos */
+.titulo-Scurso {
+  font-size: 3.5rem;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo para el resumen del curso */
+.resumen {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Estilo para los botones dentro de `curso-botones` */
+.curso-botones button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background: #1e88e5;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-right: 1rem;
+  transition: background 0.3s;
+}
+
+/* Efecto al pasar el mouse sobre los botones */
+.curso-botones button:hover {
+  background: #1565c0; /* Color de fondo más oscuro */
+}
+
+/* Estilo para el contenedor de la imagen del curso */
+.curso-imagen {
+  flex: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo para la imagen dentro de `curso-imagen` */
+.curso-imagen img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Estilo para los elementos select (menú desplegable) */
+select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}

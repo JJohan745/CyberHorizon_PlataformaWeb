@@ -1,0 +1,130 @@
+/*
+ * Archivo: client/src/styles/Dashboard.css
+ * Descripción: Estilos para los componentes del Dashboard.
+*/
+
+/* * Estilo principal para el contenedor del dashboard.
+ * Establece el relleno, color de fondo, y un borde redondeado.
+*/
+.dashboard {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+/* * Estilo para la sección superior del dashboard.
+ * Utiliza Flexbox para alinear los elementos, justificar el espacio
+ * entre ellos y permitir que se envuelvan en pantallas más pequeñas.
+*/
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+/* * Estilo para la sección central del dashboard (texto de bienvenida).
+ * Permite que el contenedor crezca para ocupar el espacio disponible
+ * y añade un margen a la derecha.
+*/
+.dashboard-center {
+  flex-grow: 1;
+  margin-right: 5rem;
+}
+
+/* * Estilo para la sección derecha del dashboard (tarjetas de estadísticas).
+ * Utiliza Flexbox para alinear las tarjetas horizontalmente y define el espacio
+ * entre ellas con la propiedad 'gap'.
+*/
+.dashboard-right {
+  display: flex;
+  gap: 1rem;
+}
+
+/* * Estilo para el título de bienvenida.
+ * Define un tamaño de fuente grande y un color específico.
+*/
+.bienvenida-titulo {
+  font-size: 4rem; /* Tamaño de letra grande */
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+/* * Estilo para el texto que acompaña al título de bienvenida.
+ * Establece el tamaño y el color del texto.
+*/
+.bienvenida-texto {
+  font-size: 1.5rem;
+  color: #444;
+}
+
+/* * Estilo para el contenedor de la tarjeta de estadísticas.
+ * Define el borde, color de fondo, borde redondeado, sombra,
+ * relleno, alineación de texto y una transición para el efecto de hover.
+*/
+.stat-card {
+  border: 1px solid #a8a8a8;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  width: 180px;
+  margin-top: 2rem;
+}
+        
+/* * Efecto de hover para la tarjeta de estadísticas.
+ * Desplaza la tarjeta ligeramente hacia arriba.
+*/
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+/* * Estilo para el título dentro de la tarjeta de estadísticas.
+*/
+.stat-card h4 {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0;
+}
+
+/* * Estilo para el valor numérico dentro de la tarjeta.
+ * Define el tamaño de la fuente, color y peso de la misma.
+*/
+.stat-card p {
+  font-size: 2.5rem;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* * Estilo para la sección inferior del dashboard (cursos).
+ * Añade un pequeño relleno superior y un borde en la parte superior.
+*/
+.dashboard-bottom {
+  padding-top: 0.1rem;
+  border-top: 1px solid #ccc;
+}
+
+/*
+ * Estilo para el contenedor de la cuadrícula de cursos.
+ * Utiliza Flexbox para permitir que los elementos se envuelvan en
+ * varias filas y añade un espacio uniforme entre ellos.
+*/
+.cursos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* * Estilo para el título de la sección de cursos.
+ * Define el tamaño y el color de la fuente.
+*/
+.titulo-cursos {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
